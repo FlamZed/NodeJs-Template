@@ -1,0 +1,61 @@
+{
+  "name": "raccoon-server",
+  "version": "0.0.1",
+  "description": "remote notification",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "npm run clean && tsc && npm run copy-files",
+    "copy-files": "copyfiles -u 1 src/**/*.html src/**/*.css dist/",
+    "start": "node dist/index.js",
+    "dev": "nodemon",
+    "clean": "rimraf dist/",
+    "eslint": "eslint src --ext .ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FlamZed/raccoon-server.git"
+  },
+  "author": "FlamCorp",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FlamZed/raccoon-server/issues"
+  },
+  "homepage": "https://github.com/FlamZed/raccoon-server#readme",
+  "dependencies": {
+    "@supabase/supabase-js": "^1.35.4",
+    "base64-arraybuffer": "^1.0.2",
+    "bcrypt": "^5.0.1",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.0.1",
+    "formidable": "^2.1.1",
+    "moment-timezone": "^0.5.34",
+    "nodemon": "^2.0.19",
+    "raygun": "^0.13.2",
+    "serve-static": "^1.15.0",
+    "shortid": "^2.2.16",
+    "socket.io": "^4.5.1",
+    "ticks-to-date": "^1.0.3",
+    "uuid": "^9.0.0",
+    "uuid-by-string": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/formidable": "^2.0.5",
+    "@typescript-eslint/eslint-plugin": "^5.47.0",
+    "@typescript-eslint/parser": "^5.47.0",
+    "copyfiles": "^2.4.1",
+    "eslint": "^8.30.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-standard-with-typescript": "^23.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.6.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "html-loader": "^4.2.0",
+    "nodemon": "^2.0.20",
+    "prettier": "2.7.1",
+    "rimraf": "^4.4.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.3"
+  }
+}
